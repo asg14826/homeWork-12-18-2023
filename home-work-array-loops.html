@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice.css">
+    
+</head>
+<body>
+    <script>
+        //targil 3
+        const student_in_class = parseInt(prompt('How many students?'))
+        const arr = new Array(student_in_class).fill(0)
+        let total = 0
+        let average = 0
+        let underAverag = 0
+        let aboveAverage = 0
+        for(let i = 0; i < arr.length;i++){
+            arr[i] = parseInt(prompt("enter the rate"))
+            document.write(arr[i] + ", ")
+            total += arr[i]
+        }
+        document.write("<br>")
+        document.write(" the total sum" + total )
+        document.write("<br>")
+        average = total/arr.length
+        document.write(" the average sum"+ average) 
+        document.write("<br>")
+
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] >= 90 ){
+                document.write(arr[i] + " is great")
+                document.write("<br>")
+            }else if(arr[i] > 70 && arr[i] <= 89){
+                document.write(arr[i] + " is good")
+                document.write("<br>") 
+            }else if(arr[i] > 50 && arr[i] <= 69){
+                document.write(arr[i] + " is average")
+                document.write("<br>") 
+            }else if(arr[i] < 50){
+                document.write(arr[i] + " is weak")
+                document.write("<br>") 
+            }
+        }
+        document.write("<br>") 
+        for (let i = 0; i < arr.length; i++){
+            if(arr[i] >= average){
+                aboveAverage++
+            }else{
+                underAverag++
+            }
+        }
+
+        document.write(aboveAverage + "are above average")
+        document.write("<br>") 
+        document.write(underAverag + "are under average")
+        document.write("<br><br>") 
+
+        //targil 1
+        const arrLength = 100
+        const arr1 = new Array(arrLength).fill(55)
+        document.write(arr1)
+
+        document.write("<br>")
+        document.write("<br>")
+        //targil 2
+        
+        const arrUserLength = parseInt(prompt("enter the length you want your array to be"))
+        let innerValue = parseInt(prompt("enter the value you want to apear in the array"))
+        const arr2 = new Array(arrUserLength).fill(innerValue)
+        document.write(arr2)
+        
+        
+    </script>
